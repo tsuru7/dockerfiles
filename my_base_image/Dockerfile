@@ -3,6 +3,7 @@ FROM ubuntu:latest
 ENV TZ=Asia/Tokyo DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
+    ffmpeg \
     git \
     imagemagick \
     libsm6 \
@@ -59,6 +60,7 @@ RUN wget https://repo.continuum.io/archive/Anaconda3-2020.07-Linux-x86_64.sh && 
     pip install opencv-python && \
     pip install nibabel \
     pip install japanize-matplotlib
+
 
 WORKDIR /
 
